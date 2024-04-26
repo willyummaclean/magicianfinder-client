@@ -1,5 +1,5 @@
 
-import "./Home.css"
+import "./home.css"
 
 
 export const Home = () => {
@@ -35,8 +35,8 @@ export const Home = () => {
             <div className="block--img block3"></div>
             <div className="block--text">
             <div className="text--head">Abra-cadabra</div>
-            <div className="text--quote">“Drive it like you stole it!”</div>
-            <div className="text--person">The Amazing Johnathan</div>
+            <div className="text--quote">“Pondering my Orb!”</div>
+            <div className="text--person">Saruman</div>
             </div>
         </div>
         </div>

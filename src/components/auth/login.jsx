@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css"
 
 export const Login = () => {
-    const [email, setEmail] = useState("ryan@ryantanay.com")
-    const [password, setPassword] = useState("tanay")
+    const [email, setEmail] = useState("bigboss@demeo.com")
+    const [password, setPassword] = useState("maga")
     const existDialog = useRef()
     const navigate = useNavigate()
 
@@ -58,7 +58,7 @@ export const Login = () => {
                         />
                     </fieldset>
                     <fieldset>
-                        <button type="submit" className="button p-3 rounded-md bg-blue-800 text-blue-100">
+                        <button type="submit" className="button p-3 rounded-md bg-blue-800 text-blue-100" onClick={handleLogin}>
                             Sign in
                         </button>
                     </fieldset>
