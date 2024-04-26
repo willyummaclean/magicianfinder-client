@@ -2,7 +2,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
 import { Login } from './components/auth/login.jsx';
-import { Authorized } from './components/Authorized';
+import { Authorized } from './components/Authorized.jsx';
 import { ApplicationViews } from './components/ApplicationViews.jsx';
 import { Register } from './components/auth/register.jsx';
 

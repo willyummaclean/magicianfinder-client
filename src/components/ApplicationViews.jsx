@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom"
+import { Route, Routes, Outlet } from "react-router-dom"
 import { Home } from "../components/home/home.jsx"
 import { Navbar } from "../components/nav/Navbar.jsx"
+
 
 export const ApplicationViews = () => {
 
@@ -14,20 +15,18 @@ useEffect(() => {
     }, [])
     
 
-    return <BrowserRouter>
-        <Routes>
-        <Route
-            path="/"
-            element={
-              <>
+    return <Routes>
+            <Route
+                 path="/"
+                 element={
+            <>
                 <Navbar />
                 <Outlet />
-              </>
+            </>
             }
             >
-        <Route index element={<Home currentUser={currentUser}/>}/> 
+            <Route index element={<Home currentUser={currentUser}/>}/> 
           
-        </Route>
+            </Route>
         </Routes>
-    </BrowserRouter>
 }
