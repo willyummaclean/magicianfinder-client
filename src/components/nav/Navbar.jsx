@@ -11,6 +11,27 @@ export const Navbar = () => {
                     <li className="navbar__item">
                         <button className="underline text-blue-600 hover:text-purple-700"
                             onClick={() => {
+                                navigate('/magicians')
+                            }}
+                        >Magicians</button>
+                    </li> 
+                    <li className="navbar__item">
+                        <button className="underline text-blue-600 hover:text-purple-700"
+                            onClick={() => {
+                                navigate('/myappointments')
+                            }}
+                        >My Appointments</button> 
+                    </li> 
+                    <li className="navbar__item">
+                        <button className="underline text-blue-600 hover:text-purple-700"
+                            onClick={() => {
+                                navigate('/myprofile')
+                            }}
+                        >My Profile</button>
+                    </li> 
+                    <li className="navbar__item">
+                        <button className="underline text-blue-600 hover:text-purple-700"
+                            onClick={() => {
                                 localStorage.removeItem("magic_token")
                                 navigate('/login')
                             }}
