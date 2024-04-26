@@ -1,19 +1,33 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Authorized } from "./Authorized"
-import { Login } from "./auth/login.jsx"
-import { Register } from './auth/register.jsx'
-import App from "../App.jsx"
-
+import { useEffect, useState } from "react"
+import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom"
+import { Home } from "../components/home/home.jsx"
+import { Navbar } from "../components/nav/Navbar.jsx"
 
 export const ApplicationViews = () => {
 
+    const [currentUser, setCurrentUser] = useState({})
+
+useEffect(() => {
+    const localMagicUser = localStorage.getItem("magic_token")
+    const MagicUser = JSON.parse(localMagicUser)
+        setCurrentUser(MagicUser)
+    }, [])
+    
+
     return <BrowserRouter>
         <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route element={<Authorized />}>
-                <Route path="/" element={<App />} />
-            </Route>
+        <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <Outlet />
+              </>
+            }
+            >
+        <Route index element={<Home currentUser={currentUser}/>}/> 
+          
+        </Route>
         </Routes>
     </BrowserRouter>
 }

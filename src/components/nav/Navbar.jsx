@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import "./Navbar.css"
 
-export const NavBar = () => {
+export const Navbar = () => {
     const navigate = useNavigate()
     return (
         <ul className="navbar pb-10">
