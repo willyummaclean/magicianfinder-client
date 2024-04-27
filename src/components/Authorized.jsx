@@ -1,16 +1,14 @@
+import { Navigate, Outlet } from "react-router-dom"
+import { Navbar } from "./nav/Navbar.jsx"
 
- 
-import { Navigate, useLocation } from "react-router-dom" 
-
-export const Authorized = ({ children }) => {
-    let location = useLocation()
-
-    if(localStorage.getItem("magic_token")) {
-        return children
-    }   
-
-    else {
-        return <Navigate to={'/login'} state={{ from: location}} replace />
-    }
-
+export const Authorized = () => {
+  if (localStorage.getItem("magic_token")) {
+    return <>
+      <Navbar />
+      <main className="p-4">
+        <Outlet />
+      </main>
+    </>
+  }
+  return <Navigate to='/login' replace />
 }
