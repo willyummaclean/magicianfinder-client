@@ -1,41 +1,11 @@
-// import { useEffect, useState } from "react"
-// import { Route, Routes, Outlet } from "react-router-dom"
-// import { Home } from "../components/home/home.jsx"
-// import { Navbar } from "../components/nav/Navbar.jsx"
-
-
-// export const ApplicationViews = () => {
-
-//     const [currentUser, setCurrentUser] = useState({})
-
-// useEffect(() => {
-//     const localMagicUser = localStorage.getItem("magic_token")
-//     const MagicUser = JSON.parse(localMagicUser)
-//         setCurrentUser(MagicUser)
-//     }, [])
-    
-
-//     return <Routes>
-//             <Route
-//                  path="/"
-//                  element={
-//             <>
-//                 <Navbar />
-//                 <Outlet />
-//             </>
-//             }
-//             >
-//             <Route index element={<Home currentUser={currentUser}/>}/> 
-          
-//             </Route>
-//         </Routes>
-// }
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Authorized } from "./Authorized"
-import { Login } from "./auth/login.jsx"
-import { Register } from './auth/register.jsx'
+import { Login } from "./auth/Login.jsx"
+import { Register } from './auth/Register.jsx'
 import { Home } from "../components/home/home.jsx"
+import { MagicianDetails } from "./magicians/MagiciansDetail.jsx"
+import { MagicianList } from "./magicians/MagicianList.jsx"
 
 export const ApplicationViews = () => {
 
@@ -49,6 +19,11 @@ export const ApplicationViews = () => {
                     {/* <Route path="showcase" element={<BookShowcase />} />
                     <Route path="new" element={<BookForm />} /> */}
                 </Route>
+                <Route path="magicians">
+                <Route index element={<MagicianList />} /> 
+                    <Route path=":magicianId" element={<MagicianDetails />}/>
+                </Route>
+                <Route path="myprofile" element={<Profile/>}/>
             </Route>
         </Routes>
     </BrowserRouter>
