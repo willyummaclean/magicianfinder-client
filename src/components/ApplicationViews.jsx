@@ -21,8 +21,9 @@ export const ApplicationViews = () => {
                 </Route>
                 <Route path="magicians">
                 <Route index element={<MagicianList />} /> 
-                <Route path=":magicianId" element={<MagicianDetails />}/>
+                    <Route path=":magicianId" element={<MagicianDetails />}/>
                 </Route>
+                <Route path="myprofile" element={<Profile/>}/>
             </Route>
         </Routes>
     </BrowserRouter>

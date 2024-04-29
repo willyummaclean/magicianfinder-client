@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getMagicians } from "../../data/MagicianData"
 import { useNavigate } from "react-router-dom"
+import { Card, CardBody, CardTitle, Button } from "reactstrap"
 
 
 export const MagicianList = () => {
@@ -18,13 +19,18 @@ export const MagicianList = () => {
         {magicians.map((magician) => {
             return (
                 <>
-                <div key={magician.id} className="planBlock">
-                    <h2  className="title">{magician.name}</h2>
-                    <div>
-                    <button className="button-74" onClick={() => navigate(`${magician.id}`)}>View Magician Profile</button>
-                    </div>
+                <div key={magician.id}>
+                    <Card style={{width: '18rem'}}>
+                        <CardBody>
+                            <CardTitle>
+                            {magician.user.first_name} {magician.user.last_name}
+                            </CardTitle>
+                            <Button onClick={() => navigate(`${magician.id}`)}>View Magician Profile</Button>
+                        </CardBody>
+                    </Card>
                  </div>
                  </>
+
             )}) }
         </>
 
