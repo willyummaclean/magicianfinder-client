@@ -4,6 +4,8 @@ import { Authorized } from "./Authorized"
 import { Login } from "./auth/Login.jsx"
 import { Register } from './auth/Register.jsx'
 import { Home } from "../components/home/home.jsx"
+import { MagicianDetails } from "./magicians/MagiciansDetail.jsx"
+import { MagicianList } from "./magicians/MagicianList.jsx"
 
 export const ApplicationViews = () => {
 
@@ -16,6 +18,10 @@ export const ApplicationViews = () => {
                     <Route index element={<Home/>} />
                     {/* <Route path="showcase" element={<BookShowcase />} />
                     <Route path="new" element={<BookForm />} /> */}
+                </Route>
+                <Route path="magicians">
+                <Route index element={<MagicianList />} /> 
+                <Route path=":magicianId" element={<MagicianDetails />}/>
                 </Route>
             </Route>
         </Routes>

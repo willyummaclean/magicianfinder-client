@@ -14,12 +14,12 @@ export const MagicianList = () => {
 
     return (
         <>
-    
+        
         {magicians.map((magician) => {
             return (
                 <>
-                <div className="planBlock">
-                    <h2 key={magician.id} className="title">{magician.name}</h2>
+                <div key={magician.id} className="planBlock">
+                    <h2  className="title">{magician.name}</h2>
                     <div>
                     <button className="button-74" onClick={() => navigate(`${magician.id}`)}>View Magician Profile</button>
                     </div>
