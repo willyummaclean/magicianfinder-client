@@ -6,6 +6,8 @@ import { Register } from './auth/Register.jsx'
 import { Home } from "../components/home/home.jsx"
 import { MagicianDetails } from "./magicians/MagiciansDetail.jsx"
 import { MagicianList } from "./magicians/MagicianList.jsx"
+import { MyProfile } from "./profile/MyProfile.jsx"
+
 
 export const ApplicationViews = () => {
 
@@ -23,7 +25,10 @@ export const ApplicationViews = () => {
                 <Route index element={<MagicianList />} /> 
                     <Route path=":magicianId" element={<MagicianDetails />}/>
                 </Route>
-                <Route path="myprofile" element={<Profile/>}/>
+                <Route path="myprofile" element={<MyProfile/>}/>
+                <Route path="magicianservices">
+                    {/* <Route path=":magicianId" element={MyServices}/> */}
+                </Route>
             </Route>
         </Routes>
     </BrowserRouter>

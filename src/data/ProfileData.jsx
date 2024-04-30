@@ -17,7 +17,7 @@ export const getParticipantByUserId = (userId) => {
     const tokenObj = JSON.parse(localStorage.getItem("magic_token"));
     const token = tokenObj ? tokenObj.token : null;
 
-    return fetch(`${apiUrl}/participant?userId=${userId}`, {
+    return fetch(`${apiUrl}/participants?userId=${userId}`, {
         headers: {
           Authorization: token ? `Token ${token}` : null,
         },
