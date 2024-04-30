@@ -9,7 +9,7 @@ export const MyProfile = () => {
     useEffect(() => {
         getUser().then((data) => setUser(data))
         if (user); {
-            getParticipant(user.id).then((p) => setParticipant(p))
+            getParticipantByUserId(user.id).then((p) => setParticipant(p))
         }
     },[])
 
