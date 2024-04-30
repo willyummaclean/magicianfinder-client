@@ -25,7 +25,7 @@ export const MyProfile = () => {
             setMagician("You betcha")
         }
         }
-    ,[])
+    ,[participant])
     
 
     return (
