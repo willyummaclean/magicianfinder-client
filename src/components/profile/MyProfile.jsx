@@ -17,10 +17,16 @@ export const MyProfile = () => {
     useEffect(() => {
         if (user); {
             getParticipantByUserId(user.id).then((p) => setParticipant(p))}
+        
+    }, [user])
+
+    useEffect(() => {
         if (participant.ismagician == true) {
             setMagician("You betcha")
         }
-    }, [user])
+        }
+    ,[])
+    
 
     return (
         <>
