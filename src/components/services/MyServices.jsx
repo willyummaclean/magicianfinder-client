@@ -25,11 +25,12 @@ export const MyServices = ( ) => {
       }, [magicianId]);
 
     const handleDelete = (magicianserviceId) => {
-        deleteMagicianService(magicianserviceId)
-        getMagicianServices(magician.id).then((serviceData) =>
-        setMagicianServices(serviceData)
-      )
-    }
+        deleteMagicianService(magicianserviceId).then(() => {
+            getMagicianServices(magician.id).then((serviceData) =>
+              setMagicianServices(serviceData)
+            );     
+        });
+      };
 
 
       return (
