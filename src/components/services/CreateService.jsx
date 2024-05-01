@@ -34,7 +34,7 @@ export const CreateService = () => {
         <Form>   
             <FormGroup>
             <Label for="serviceSelect">
-                Select
+                Service Type
             </Label>
                 <Input
                 id="serviceSelect"
@@ -43,6 +43,9 @@ export const CreateService = () => {
                 onChange={handleServiceTypeChange} 
                 value={serviceTypeId} 
                 >
+                <option value="0">
+                    Select one:
+                </option>
                 {serviceTypes.map((serviceType) => {
                     return (
                     <option key={serviceType.id} value={serviceType.id}>
