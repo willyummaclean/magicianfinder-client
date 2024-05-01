@@ -40,7 +40,7 @@ export const MyProfile = () => {
             </CardBody>
         </Card>
         { (magician == "You betcha")? (
-            <Button onClick={() => navigate(`magicianservices/${participant.id}`)}>My Services</Button>
+            <Button onClick={() => navigate(`/magicianservices/${participant.id}`)}>My Services</Button>
         ):(<></>)}
         </>
     )
