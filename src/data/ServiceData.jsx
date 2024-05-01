@@ -80,3 +80,14 @@ export const createMagicianService = async (newService) => {
     return await res.json();
 }
 
+export const getMagicianServices = () => {
+  const tokenObj = JSON.parse(localStorage.getItem("magic_token"));
+  const token = tokenObj ? tokenObj.token : null;
+
+    return fetch(`${apiUrl}/magicianservices`, {
+        headers: {
+          Authorization: token ? `Token ${token}` : null,
+        },
+      })
+    .then((res) => res.json())
+}

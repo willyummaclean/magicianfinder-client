@@ -25,6 +25,13 @@ export const Navbar = () => {
                     <li className="navbar__item">
                         <button className="underline text-blue-600 hover:text-purple-700"
                             onClick={() => {
+                                navigate('/makeappointment')
+                            }}
+                        >Make Appointment</button> 
+                    </li> 
+                    <li className="navbar__item">
+                        <button className="underline text-blue-600 hover:text-purple-700"
+                            onClick={() => {
                                 navigate('/myprofile')
                             }}
                         >My Profile</button>

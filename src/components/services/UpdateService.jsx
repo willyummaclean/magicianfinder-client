@@ -21,6 +21,13 @@ export const UpdateService = () => {
         getMagicianServiceById(magicianServiceId).then((magicianService) => setMagicianService(magicianService))
     }, [magicianServiceId])
 
+    useEffect(() => {
+        if (magicianService) {
+        setDescription(magicianService.description)
+        setServiceTypeId(magicianService.service?.id)
+        }
+    }, [magicianService])
+
     const handleSave = () => {
         const trickObject = {
             "service": serviceTypeId,   
@@ -31,9 +38,9 @@ export const UpdateService = () => {
             trickObject.description = magicianService.description
         }
         if (trickObject.service === 0) {
-            trickObject.service= magicianService.service
+            trickObject.service= magicianService.service.id
         }
-        updateMagicianService(trickObject, magicianServiceId)
+        updateMagicianService(trickObject, magicianService.id)
         navigate("/myprofile")
     }
 
@@ -46,7 +53,7 @@ export const UpdateService = () => {
         <Form>   
             <FormGroup>
             <Label for="serviceSelect">
-                Select
+                Service Type
             </Label>
                 <Input
                 id="serviceSelect"
@@ -55,6 +62,9 @@ export const UpdateService = () => {
                 onChange={handleServiceTypeChange} 
                 value={serviceTypeId} 
                 >
+                <option value="0"> 
+                Select one
+                </option>
                 {serviceTypes.map((serviceType) => {
                     return (
                     <option key={serviceType.id} value={serviceType.id}>
@@ -72,6 +82,7 @@ export const UpdateService = () => {
                 id="descriptionText"
                 name="text"
                 type="textarea"
+                value={description}
                 onChange={(event) => setDescription(event.target.value)}
                 />
             </FormGroup>

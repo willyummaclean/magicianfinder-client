@@ -11,6 +11,7 @@ import { MyServices } from "./services/MyServices.jsx"
 import { UpdateService } from "./services/UpdateService.jsx"
 import { CreateService } from "./services/CreateService.jsx"
 import { AppointmentList } from "./appointments/MyAppointments.jsx"
+import { MakeAppointment } from "./appointments/MakeAppointment.jsx"
 
 
 export const ApplicationViews = () => {
@@ -35,7 +36,8 @@ export const ApplicationViews = () => {
                     <Route path="update/:magicianServiceId" element={<UpdateService/>}/>
                     <Route path="new" element={<CreateService/>}/>
                 </Route>
-                <Route path="myappointments" element={<AppointmentList/>}/>    
+                <Route path="myappointments" element={<AppointmentList/>}/>
+                <Route path="makeappointment" element={<MakeAppointment/>}/>   
             </Route>
         </Routes>
     </BrowserRouter>
