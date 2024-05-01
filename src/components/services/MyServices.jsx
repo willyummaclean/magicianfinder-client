@@ -61,7 +61,7 @@ export const MyServices = ( ) => {
                     )}
             </div>
             <div>
-                <Button>Add New Service</Button>
+                <Button onClick={() => navigate(`/magicianservices/new`)}>Add New Service</Button>
             </div>
           </div>
           

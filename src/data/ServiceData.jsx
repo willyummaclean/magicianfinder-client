@@ -53,3 +53,19 @@ export const getServicesTypes = () => {
 
 }
 
+
+export const createMagicianService = async (newService) => {
+    const tokenObj = JSON.parse(localStorage.getItem("magic_token"));
+    const token = tokenObj ? tokenObj.token : null;
+
+    const res = await fetch(`${apiUrl}/magicianservices`, {
+        method: "POST",
+        headers: {
+            Authorization: token ? `Token ${token}` : null,
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newService)
+    });
+    return await res.json();
+}
+

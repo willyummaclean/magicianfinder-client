@@ -9,6 +9,7 @@ import { MagicianList } from "./magicians/MagicianList.jsx"
 import { MyProfile } from "./profile/MyProfile.jsx"
 import { MyServices } from "./services/MyServices.jsx"
 import { UpdateService } from "./services/UpdateService.jsx"
+import { CreateService } from "./services/CreateService.jsx"
 
 
 export const ApplicationViews = () => {
@@ -31,6 +32,7 @@ export const ApplicationViews = () => {
                 <Route path="magicianservices">
                     <Route path=":magicianId" element={<MyServices/>}/>
                     <Route path="update/:magicianServiceId" element={<UpdateService/>}/>
+                    <Route path="new" element={<CreateService/>}/>
                 </Route>
             </Route>
         </Routes>
