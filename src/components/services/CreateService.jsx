@@ -2,14 +2,27 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { createMagicianService, getServicesTypes } from "../../data/ServiceData"
 import { Button, Form, FormGroup, Input, Label } from "reactstrap"
-
+import { getUser, getParticipantByUserId } from "../../data/ProfileData"
 
 
 export const CreateService = () => {
+    const [user, setUser] = useState({})
+    const [participant, setParticipant] = useState({})
     const [description, setDescription] = useState("")
     const [serviceTypeId, setServiceTypeId] = useState(0)
     const [serviceTypes, setServiceTypes] = useState([])
     const navigate = useNavigate()
+
+    useEffect(() => {
+        getUser().then((data) => setUser(data))
+        }
+    ,[])
+
+    useEffect(() => {
+        if (user); {
+            getParticipantByUserId(user.id).then((p) => setParticipant(p))}
+        
+    }, [user])
 
     useEffect(() => {
         getServicesTypes().then((data) => setServiceTypes(data))
@@ -22,7 +35,7 @@ export const CreateService = () => {
         }
        
         createMagicianService(trickObject)
-        navigate("/myprofile")
+        navigate(`/magicianservices/${participant.id}`)
     }
 
     const handleServiceTypeChange = (event) => {

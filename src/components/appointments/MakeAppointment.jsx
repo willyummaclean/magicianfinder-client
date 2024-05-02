@@ -23,7 +23,7 @@ export const MakeAppointment = () => {
         }
        
         createAppointment(appointmentObject)
-        navigate("/myprofile")
+        navigate("/myappointments")
     }
 
     const handleServiceTypeChange = (event) => {

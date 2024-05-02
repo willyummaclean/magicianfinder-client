@@ -2,16 +2,29 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getMagicianServiceById, getServicesTypes, updateMagicianService } from "../../data/ServiceData"
 import { Button, Form, FormGroup, Input, Label } from "reactstrap"
-
+import { getUser, getParticipantByUserId } from "../../data/ProfileData"
 
 
 export const UpdateService = () => {
+    const [user, setUser] = useState({})
+    const [participant, setParticipant] = useState({})
     const [description, setDescription] = useState("")
     const [serviceTypeId, setServiceTypeId] = useState(0)
     const [serviceTypes, setServiceTypes] = useState([])
     const [magicianService, setMagicianService] = useState({})
     const { magicianServiceId } = useParams()
     const navigate = useNavigate()
+
+    useEffect(() => {
+        getUser().then((data) => setUser(data))
+        }
+    ,[])
+
+    useEffect(() => {
+        if (user); {
+            getParticipantByUserId(user.id).then((p) => setParticipant(p))}
+        
+    }, [user])
 
     useEffect(() => {
         getServicesTypes().then((data) => setServiceTypes(data))
@@ -41,7 +54,7 @@ export const UpdateService = () => {
             trickObject.service= magicianService.service.id
         }
         updateMagicianService(trickObject, magicianService.id)
-        navigate("/myprofile")
+        navigate(`/magicianservices/${participant.id}`)
     }
 
     const handleServiceTypeChange = (event) => {
