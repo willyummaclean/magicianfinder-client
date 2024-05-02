@@ -11,18 +11,19 @@ export const MakeAppointment = () => {
     const [magicianServiceId, setMagicianServiceId] = useState(0)
     const [magicianServices, setMagicianServices] = useState([])
     const navigate = useNavigate()
+    
 
     useEffect(() => {
         getMagicianServices().then((data) => setMagicianServices(data))
     }, [])
 
-    const handleSave = () => {
+    const handleSave = async () => {
         const appointmentObject = {
             "magicianService": magicianServiceId,   
             "date": date 
         }
        
-        createAppointment(appointmentObject)
+        await createAppointment(appointmentObject)
         navigate("/myappointments")
     }
 

@@ -7,9 +7,24 @@ import { deleteAppointment, getAppointmentsByCustomer } from "../../data/Appoint
 export const AppointmentList = () => {
   const [appointments, setAppointments] = useState([]);
   const navigate = useNavigate();
+  
+
+  // useEffect(() => {
+  //   getAppointmentsByCustomer().then((data) => setAppointments(data));
+  // }, []);
+
 
   useEffect(() => {
-    getAppointmentsByCustomer().then((data) => setAppointments(data));
+    const fetchAppointments = async () => {
+      try {
+        const appointmentData = await getAppointmentsByCustomer();
+        setAppointments(appointmentData);
+      } catch (error) {
+        console.error("Error fetching appointments:", error);
+      }
+    };
+
+    fetchAppointments();
   }, []);
 
   const handleDelete = (appointmentId) => {
@@ -22,9 +37,8 @@ export const AppointmentList = () => {
 
   return (
     <>
-      {appointments.map((appointment) => {
+      {appointments?.map((appointment) => {
         return (
-          <>
             <div key={appointment.id}>
               <Card style={{ width: '18rem' }}>
                 <CardBody>
@@ -41,12 +55,11 @@ export const AppointmentList = () => {
                     View Magician Profile
                   </Button>
                   <Button onClick={() => handleDelete(appointment.id)}>
-                    Delete Appointment
+                    Delete Appointments
                   </Button>
                 </CardBody>
               </Card>
             </div>
-          </>
         );
       })}
     </>
