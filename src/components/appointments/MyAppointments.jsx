@@ -55,7 +55,7 @@ export const AppointmentList = () => {
                     View Magician Profile
                   </Button>
                   <Button onClick={() => handleDelete(appointment.id)}>
-                    Delete Appointments
+                    Delete Appointment
                   </Button>
                 </CardBody>
               </Card>
