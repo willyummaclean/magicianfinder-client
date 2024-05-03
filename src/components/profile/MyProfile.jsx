@@ -53,10 +53,10 @@ export const MyProfile = () => {
     
 
     return (
-        <>
-        <Card>
-            <CardTitle>My Profile</CardTitle>
-            <CardBody>
+      <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "30vh",  width: "275%" }}>
+        <Card style={{ width: "30%" }}>
+            <CardTitle className="text-center">My Profile </CardTitle>
+            <CardBody className="text-center">
             <p>First Name: {user?.firstName}</p>
             <p>Last Name: {user?.lastName}</p>
             <p>Username: {user?.username}</p>
@@ -68,7 +68,7 @@ export const MyProfile = () => {
             My Services
             </Button>
         )}  
-        </>     
+        </div>     
 
 
         // <>
