@@ -2,30 +2,13 @@ import { useEffect, useState } from "react"
 import { getUser, getParticipantByUserId } from "../../data/ProfileData"
 import { Button, Card, CardBody, CardTitle } from "reactstrap"
 import { useNavigate } from "react-router-dom"
+import "./profile.css"
 
 export const MyProfile = () => {
     const [user, setUser] = useState({})
     const [participant, setParticipant] = useState({})
     const [magician, setMagician] = useState("nope")
     const navigate = useNavigate()
-
-    // useEffect(() => {
-    //     getUser().then((data) => setUser(data))
-    //     }
-    // ,[])
-
-    // useEffect(() => {
-    //     if (user.id); {
-    //         getParticipantByUserId(user?.id).then((p) => setParticipant(p))}
-        
-    // }, [user])
-
-    // useEffect(() => {
-    //     if (participant.ismagician == true) {
-    //         setMagician("You betcha")
-    //     }
-    //     }
-    // ,[participant])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -53,37 +36,20 @@ export const MyProfile = () => {
     
 
     return (
-      <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "30vh",  width: "275%" }}>
-        <Card style={{ width: "30%" }}>
-            <CardTitle className="text-center">My Profile </CardTitle>
-            <CardBody className="text-center">
-            <p>First Name: {user?.firstName}</p>
-            <p>Last Name: {user?.lastName}</p>
-            <p>Username: {user?.username}</p>
-            <p>Magician? {magician}</p>
-            </CardBody>
-        </Card>
+      <div className="custom-card-container"> {/* Apply custom CSS class for styling */}
+      <div className="custom-card"> {/* Apply custom CSS class for styling */}
+        <h2 className="custom-card-title">My Profile</h2> {/* Apply custom CSS class for styling */}
+        <div className="custom-card-body"> {/* Apply custom CSS class for styling */}
+          <p>First Name: {user?.firstName}</p>
+          <p>Last Name: {user?.lastName}</p>
+          <p>Username: {user?.username}</p>
+          <p>Magician? {magician}</p>
+        </div>
+        {/* Render button conditionally based on magician status */}
         {magician === "You betcha" && (
-            <Button onClick={() => navigate(`/magicianservices/${participant.id}`)}>
-            My Services
-            </Button>
-        )}  
-        </div>     
-
-
-        // <>
-        // <Card>
-        //     <CardTitle My Profile/>
-        //     <CardBody>
-        //         <p>First Name:  {user.firstName}</p>
-        //         <p>Last Name:  {user.lastName}</p>
-        //         <p>Username:  {user.username}</p>
-        //         <p>Magician?  {magician}</p>
-        //     </CardBody>
-        // </Card>
-        // { (magician == "You betcha")? (
-        //     <Button onClick={() => navigate(`/magicianservices/${participant.id}`)}>My Services</Button>
-        // ):(<></>)}
-        // </>
-    )
-}
+          <button className="custom-card-button" onClick={() => navigate(`/magicianservices/${participant.id}`)}>My Services</button>
+        )}
+      </div>
+    </div>
+  );
+};
