@@ -22,6 +22,7 @@ export const Login = () => {
                 if (authInfo.valid) {
                     localStorage.setItem("magic_token", JSON.stringify(authInfo))
                     navigate("/")
+                    window.location.reload()
                 } else {
                     existDialog.current.showModal()
                 }
