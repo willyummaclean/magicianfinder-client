@@ -35,13 +35,14 @@ export const MakeAppointment = () => {
         <>
         <Form>   
             <FormGroup>
-            <Label for="serviceSelect">
+            <Label for="serviceSelect" style={{fontSize: '36px'}}>
                 Magician Service
             </Label>
                 <Input
                 id="serviceSelect"
                 name="select"
                 type="select"
+                style={{fontSize: '36px'}}
                 onChange={handleServiceTypeChange} 
                 value={magicianServiceId} 
                 >
@@ -58,19 +59,20 @@ export const MakeAppointment = () => {
             </FormGroup>
             
             <FormGroup>
-                <Label for="date">
+                <Label for="date" style={{fontSize: '36px'}}>
                 Date
                 </Label>
                 <Input
                 id="date"
                 name="date"
+                style={{fontSize: '36px'}}
                 input type="date" min="2024-05-05" max="2028-12-31" 
                 onChange={(event) => setDate(event.target.value)}
                 />
             </FormGroup>
-            <Button onClick={() => handleSave()}>
+            <button className='custom-appointment-button'  onClick={() => handleSave()}>
             Submit
-            </Button>
+            </button>
         </Form>
         </>
     )

@@ -62,16 +62,17 @@ export const UpdateService = () => {
     };
 
     return (
-        <>
+        <div className="custom-service-card">
         <Form>   
             <FormGroup>
-            <Label for="serviceSelect">
+            <Label for="serviceSelect" style={{fontSize: '36px'}}>
                 Service Type
             </Label>
                 <Input
                 id="serviceSelect"
                 name="select"
                 type="select"
+                style={{fontSize: '36px'}}
                 onChange={handleServiceTypeChange} 
                 value={serviceTypeId} 
                 >
@@ -88,21 +89,22 @@ export const UpdateService = () => {
             </FormGroup>
             
             <FormGroup>
-                <Label for="descriptionText">
+                <Label for="descriptionText" style={{fontSize: '36px'}}>
                 Description
                 </Label>
                 <Input
                 id="descriptionText"
                 name="text"
                 type="textarea"
+                style={{fontSize: '36px'}}
                 value={description}
                 onChange={(event) => setDescription(event.target.value)}
                 />
             </FormGroup>
-            <Button onClick={() => handleSave()}>
+            <button className="custom-service-button" onClick={() => handleSave()}>
             Submit
-            </Button>
+            </button>
         </Form>
-        </>
+        </div>
     )
 }

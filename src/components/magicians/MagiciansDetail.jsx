@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getMagicianById } from "../../data/MagicianData"
 import { getMagicianServices } from "../../data/MagicianData"
 import { useParams } from "react-router-dom"
-
+import { Card } from "reactstrap"
 
 export const MagicianDetails = ( ) => {
     const [magician, setMagician] = useState({})
@@ -50,7 +50,7 @@ export const MagicianDetails = ( ) => {
           <div>
             <h1>Magician Details</h1>
             {magician ? (
-              <div>
+              <Card style={{width: '25rem', height: '25rem', alignItems: 'center', marginTop: '10px', paddingTop: '25px'}}>
                 <h2>Name: {magician?.user?.first_name} {magician?.user?.last_name}</h2>
                 <div>
                   {magicianservices.map((magicianservice) => {
@@ -66,7 +66,7 @@ export const MagicianDetails = ( ) => {
                     );
                   })}
                 </div>
-              </div>
+              </Card>
             ) : (
               <p>Loading...</p>
             )}
