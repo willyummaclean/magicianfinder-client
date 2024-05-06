@@ -31,7 +31,7 @@ export const AppointmentList = () => {
 
   return (
     <>
-      <div className="appointments-container">
+      <div className="appointments-container" style={{ backgroundColor: "white" }}>
         <h1 className="appointments-title">My Appointments</h1>
         <div className="appointments-grid-container">
           {appointments?.map((appointment) => {
