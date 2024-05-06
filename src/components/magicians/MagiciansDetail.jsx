@@ -51,13 +51,13 @@ export const MagicianDetails = ( ) => {
             <h1>Magician Details</h1>
             {magician ? (
               <div>
-                <p>Name: {magician?.user?.first_name} {magician?.user?.last_name}</p>
+                <h2>Name: {magician?.user?.first_name} {magician?.user?.last_name}</h2>
                 <div>
                   {magicianservices.map((magicianservice) => {
                     return (
                       <>
                         <div key={magicianservice.id}>
-                          <h2>Magic Type: {magicianservice.service.name}</h2>
+                          <h3>Magic Type: {magicianservice.service.name}</h3>
                           <div>
                             <p>{magicianservice.description}</p>
                           </div>

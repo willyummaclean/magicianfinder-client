@@ -1,6 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom"
 import { MyNavbar } from "./nav/Navbar.jsx"
 import './authorized.css'
+import { Login } from "./auth/Login.jsx"
 export const Authorized = () => {
   if (localStorage.getItem("magic_token")) {
     return( <>
@@ -17,5 +18,16 @@ export const Authorized = () => {
    
     </>)
   }
-  return <Navigate to='/login' replace />
+  return( <>
+    <div>
+      <div className="navdisplay">
+      </div>
+      <div className="display">
+        <main className="container"> 
+          <Login />
+        </main>
+      </div>
+    </div>
+ 
+  </>)
 }

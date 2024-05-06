@@ -1,0 +1,55 @@
+/* services.css */
+
+body, p, h1, h2, h3, h4, h5, h6, span, div, button {
+    font-family: Trattatello, fantasy; /* Apply font-family to all text elements */
+}
+
+.custom-appointment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px; /* Adjust the padding as needed */
+}
+
+.custom-appointment-card {
+    width: 100%;
+    padding: 20px; /* Adjust the padding as needed */
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.custom-appointment-card-title {
+    text-align: center;
+    font-size: 36px;
+    
+}
+
+.custom-appointment-card-body {
+    text-align: center;
+    font-size: 24px;
+}
+
+.custom-appointment-button {
+    display: block;
+    margin: 10px auto; /* Center the button */
+    font-size: 18px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* services.css */
+.appointments-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appointments-grid-container {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
