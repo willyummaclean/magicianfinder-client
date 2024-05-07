@@ -81,3 +81,18 @@ fieldset {
     min-width: 15rem;
     min-height: 5rem;
 }
+
+.navdisplay {
+    display: flex;
+    justify-content: center;
+    width: 125%;
+  }
+
+  .display {
+    display: flex; 
+    justify-content: center;
+    width: 125%;
+    margin-top: -10% ;
+  
+  }
+  

@@ -34,9 +34,9 @@ export const Home = () => {
                 <div className="block">
                     <div className="block--img block3"></div>
                     <div className="block--text">
-                    <div className="text--head">Abra-cadabra</div>
-                    <div className="text--quote">“Pondering my Orb!”</div>
-                    <div className="text--person">Saruman</div>
+                    <div className="text--head">Hocus-Pocus</div>
+                    <div className="text--quote">“It is the unspoken ethic of all magicians to not reveal the secrets.“</div>
+                    <div className="text--person">David Copperfield</div>
                     </div>
                 </div>
 
@@ -52,9 +52,9 @@ export const Home = () => {
                 <div className="block">
                     <div className="block--img block5"></div>
                     <div className="block--text">
-                    <div className="text--head">Abra-cadabra</div>
-                    <div className="text--quote">“Pondering my Orb!”</div>
-                    <div className="text--person">Saruman</div>
+                    <div className="text--head">Incantation</div>
+                    <div className="text--quote">“Magic is the only honest profession. A magician promises to deceive you and he does.“</div>
+                    <div className="text--person">Karl Germain</div>
                     </div>
                 </div>
            
