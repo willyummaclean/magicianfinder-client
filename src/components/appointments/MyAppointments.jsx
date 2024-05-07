@@ -32,7 +32,7 @@ export const AppointmentList = () => {
   return (
     <>
       <div className="appointments-container">
-        <h1 className="appointments-title">My Appointments</h1>
+        <h1 className="appointments-title" style={{margin: '20px'}}>My Appointments</h1>
         <div className="appointments-grid-container" style={{ backgroundColor: 'white'}}>
           {appointments?.map((appointment) => {
             return (

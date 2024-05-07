@@ -48,10 +48,9 @@ export const MagicianDetails = ( ) => {
       <>
         <div className="container">
           <div>
-            <h1>Magician Details</h1>
             {magician ? (
               <Card style={{width: '25rem', height: '25rem', alignItems: 'center', marginTop: '10px', paddingTop: '25px'}}>
-                <h2>Name: {magician?.user?.first_name} {magician?.user?.last_name}</h2>
+                <h2>Magician: {magician?.user?.first_name} {magician?.user?.last_name}</h2>
                 <div>
                   {magicianservices.map((magicianservice) => {
                     return (

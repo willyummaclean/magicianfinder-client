@@ -7,6 +7,7 @@ export const Register = () => {
     const [password, setPassword] = useState("straytor")
     const [firstName, setFirstName] = useState("Admina")
     const [lastName, setLastName] = useState("Straytor")
+    // const [isMagician, setIsMagician] = useState(false)
     const existDialog = useRef()
     const navigate = useNavigate()
 
@@ -15,10 +16,12 @@ export const Register = () => {
         fetch(`http://localhost:8000/register`, {
             method: "POST",
             body: JSON.stringify({
-                email,
-                password,
+                email: email,
+                password: password,
                 first_name: firstName,
-                last_name: lastName
+                last_name: lastName,
+                is_staff: false,
+                is_superuser: false
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -83,6 +86,14 @@ export const Register = () => {
                                 placeholder="Password"
                             />
                         </fieldset>
+                        {/* <fieldset>
+                            <label htmlFor="selectIsMagician">Register as a Magician?</label>
+                            <select style={{marginBottom: "15px"}} type="isMagician" id="selectIsMagician"
+                            value={isMagician} onChange={evt => setIsMagician(evt.target.value)}>
+                            <option value={true}>Yes</option>
+                            <option value={false}>No</option>
+                            </select>
+                        </fieldset> */}
                         <fieldset>
                             <button type="submit" className="button p-3 rounded-md bg-blue-800 text-blue-100">
                                 Register
