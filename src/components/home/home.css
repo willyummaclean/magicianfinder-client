@@ -3,6 +3,13 @@
     text-decoration: none;
 }
 
+.title-main {
+  font-family: Trattatello, fantasy;
+  text-decoration: none;
+  font-size: 300%;
+}
+
+
 .title-container {
     margin: 2rem auto;
     width: 60%;
@@ -65,17 +72,23 @@
   }
   
   .block1 {
-    background-image: url("https://media.nga.gov/iiif/58fd1357-f915-42fe-bf91-7efb396dffd5/full/!384,384/0/default.jpg");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Prof._Bollini_the_Italian_magician._LCCN2014635595.jpg/640px-Prof._Bollini_the_Italian_magician._LCCN2014635595.jpg");
   }
   
   .block2 {
-    background-image: url("https://media.nga.gov/iiif/aa33172d-31cf-4990-a25a-9c77b6cecbe3/full/!384,384/0/default.jpg");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Conjurer_Bosch.jpg/640px-Conjurer_Bosch.jpg");
   }
   
   .block3 {
-    background-image: url("https://media.nga.gov/iiif/b2623a9f-910f-4ccc-a7ef-c438cb5956c8/full/!384,384/0/default.jpg");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/David_Copperfield_Magician_Television_Special_1977.JPG/640px-David_Copperfield_Magician_Television_Special_1977.JPG");
   }
+
+  .block4 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Howard_Thurston_performing_a_levitation_illusion.jpg/640px-Howard_Thurston_performing_a_levitation_illusion.jpg")}
   
+  .block5 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Jan_madd.jpg/640px-Jan_madd.jpg");
+  }
   .block--text {
     position: absolute;
     width: 100%;

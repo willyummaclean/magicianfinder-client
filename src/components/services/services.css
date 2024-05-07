@@ -1,0 +1,73 @@
+/* services.css */
+
+body, p, h1, h2, h3, h4, h5, h6, span, div, button {
+    font-family: Trattatello, fantasy; /* Apply font-family to all text elements */
+}
+
+.custom-service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px; /* Adjust the padding as needed */
+}
+
+.custom-service-card {
+    width: 100%;
+    padding: 20px; /* Adjust the padding as needed */
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.custom-service-card-title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.custom-service-card-body {
+    text-align: center;
+    font-size: 24px;
+}
+
+.custom-service-button {
+    display: block;
+    margin: 10px auto; /* Center the button */
+    font-size: 18px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* services.css */
+
+/* Existing CSS remains the same */
+.add-button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Adjust the margin as needed */
+    background-color: black;
+    color: #ffffff;
+}
+
+
+.custom-service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-service-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.custom-service-card {
+    width: 300px; /* Adjust the width of each card as needed */
+    margin: 10px; /* Adjust the margin between cards as needed */
+    border: 1px solid #ccc; /* Add borders to cards for visualization */
+    border-radius: 5px; /* Add border radius for visual appeal */
+    padding: 10px; /* Add padding to cards for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for elevation */
+}
+

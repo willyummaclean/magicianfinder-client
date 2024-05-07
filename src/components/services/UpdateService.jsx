@@ -2,10 +2,12 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getMagicianServiceById, getServicesTypes, updateMagicianService } from "../../data/ServiceData"
 import { Button, Form, FormGroup, Input, Label } from "reactstrap"
-
+import { getUser, getParticipantByUserId } from "../../data/ProfileData"
 
 
 export const UpdateService = () => {
+    const [user, setUser] = useState({})
+    const [participant, setParticipant] = useState({})
     const [description, setDescription] = useState("")
     const [serviceTypeId, setServiceTypeId] = useState(0)
     const [serviceTypes, setServiceTypes] = useState([])
@@ -14,12 +16,30 @@ export const UpdateService = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
+        getUser().then((data) => setUser(data))
+        }
+    ,[])
+
+    useEffect(() => {
+        if (user); {
+            getParticipantByUserId(user.id).then((p) => setParticipant(p))}
+        
+    }, [user])
+
+    useEffect(() => {
         getServicesTypes().then((data) => setServiceTypes(data))
     }, [])
 
     useEffect(() => {
         getMagicianServiceById(magicianServiceId).then((magicianService) => setMagicianService(magicianService))
     }, [magicianServiceId])
+
+    useEffect(() => {
+        if (magicianService) {
+        setDescription(magicianService.description)
+        setServiceTypeId(magicianService.service?.id)
+        }
+    }, [magicianService])
 
     const handleSave = () => {
         const trickObject = {
@@ -31,10 +51,10 @@ export const UpdateService = () => {
             trickObject.description = magicianService.description
         }
         if (trickObject.service === 0) {
-            trickObject.service= magicianService.service
+            trickObject.service= magicianService.service.id
         }
-        updateMagicianService(trickObject, magicianServiceId)
-        navigate("/myprofile")
+        updateMagicianService(trickObject, magicianService.id)
+        navigate(`/magicianservices/${participant.id}`)
     }
 
     const handleServiceTypeChange = (event) => {
@@ -42,19 +62,23 @@ export const UpdateService = () => {
     };
 
     return (
-        <>
+        <div className="custom-service-card">
         <Form>   
             <FormGroup>
-            <Label for="serviceSelect">
-                Select
+            <Label for="serviceSelect" style={{fontSize: '36px'}}>
+                Service Type
             </Label>
                 <Input
                 id="serviceSelect"
                 name="select"
                 type="select"
+                style={{fontSize: '36px'}}
                 onChange={handleServiceTypeChange} 
                 value={serviceTypeId} 
                 >
+                <option value="0"> 
+                Select one
+                </option>
                 {serviceTypes.map((serviceType) => {
                     return (
                     <option key={serviceType.id} value={serviceType.id}>
@@ -65,20 +89,22 @@ export const UpdateService = () => {
             </FormGroup>
             
             <FormGroup>
-                <Label for="descriptionText">
+                <Label for="descriptionText" style={{fontSize: '36px'}}>
                 Description
                 </Label>
                 <Input
                 id="descriptionText"
                 name="text"
                 type="textarea"
+                style={{fontSize: '36px'}}
+                value={description}
                 onChange={(event) => setDescription(event.target.value)}
                 />
             </FormGroup>
-            <Button onClick={() => handleSave()}>
+            <button className="custom-service-button" onClick={() => handleSave()}>
             Submit
-            </Button>
+            </button>
         </Form>
-        </>
+        </div>
     )
 }

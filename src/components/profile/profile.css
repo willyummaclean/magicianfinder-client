@@ -1,0 +1,49 @@
+.title {
+    font-family: Trattatello, fantasy;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.custom-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px; /* Adjust the padding as needed */
+  }
+  
+  .custom-card {
+    width: 100%;
+    padding: 20px; /* Adjust the padding as needed */
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+  }
+  
+  .custom-card-title {
+    text-align: center;
+    font-size: 36px;
+    font-family: Trattatello, fantasy;
+  }
+  
+  .custom-card-body {
+    text-align: center;
+    font-size: 24px;
+    font-family: Trattatello, fantasy;
+  }
+  
+  .custom-card-button {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px;
+    font-size: 36px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Trattatello, fantasy;
+  }
+  
+  .custom-card-button:hover {
+    background-color: grey
+  }
