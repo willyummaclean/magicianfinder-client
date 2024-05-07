@@ -12,6 +12,7 @@ import { UpdateService } from "./services/UpdateService.jsx"
 import { CreateService } from "./services/CreateService.jsx"
 import { AppointmentList } from "./appointments/MyAppointments.jsx"
 import { MakeAppointment } from "./appointments/MakeAppointment.jsx"
+import { CreateParticipant } from "./auth/Participant.jsx"
 
 
 export const ApplicationViews = () => {
@@ -20,6 +21,7 @@ export const ApplicationViews = () => {
         <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/magician" element={<CreateParticipant />} />
             <Route element={<Authorized />}>
                 <Route path="/">
                     <Route index element={<Home/>} />
