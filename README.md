@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
 
 It's a tough world out there for magician's trying to get exposure and the same goes for event-planners trying to hire magician talent. That's where Magician Finder comes in; its a prototype for a website that allows magician's to offer their services and event-planners to book appointments based on the services they need. Here a magician user can Create, Read, Update or delete their services, while a client user can Create, Read or Delete their appointments. 
 
@@ -101,25 +101,38 @@ This project utilizes a Django API, https://github.com/willyummaclean/magicianfi
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## MVP Features
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Sign-up and sign-in using Django User Model, register your profile as a Magician or a client
+2. Magicians can create the services they offer by selecting a category and providing a description as well as viewing, updating or deleting them
+3. Clients can view the magician profiles and view their services
+4. Clients can create appointments by selecting a magician's service and specifying a date of their event. They can also delete an exisiting appointment
+5. Magicians can see a list of their appointments and delete them 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Images 
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+ERD
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+- ![ERD](https://private-user-images.githubusercontent.com/149634021/328960597-4f69b64e-4ff3-4b70-99f5-0f9545e47a76.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTUxODQ4MzAsIm5iZiI6MTcxNTE4NDUzMCwicGF0aCI6Ii8xNDk2MzQwMjEvMzI4OTYwNTk3LTRmNjliNjRlLTRmZjMtNGI3MC05OWY1LTBmOTU0NWU0N2E3Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUwOFQxNjA4NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMmEyOWJjNmRjM2ZhN2I5NzdjODgxZjYyZDlkZTU0MjIxOTdmYWM3MjQwYmI4YTViYTI2OTlkZTY5OTJiNjc1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ETUqbmJ6QzsB6Jc7FJcQ2EVgMOOw4O6uS_tJtM_O3WE)
+
+Home Page
+
+- ![Home Page](https://private-user-images.githubusercontent.com/149634021/328963158-21ce1f3b-ec19-4cd3-9967-13481bc9495a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTUxODUzNDEsIm5iZiI6MTcxNTE4NTA0MSwicGF0aCI6Ii8xNDk2MzQwMjEvMzI4OTYzMTU4LTIxY2UxZjNiLWVjMTktNGNkMy05OTY3LTEzNDgxYmM5NDk1YS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUwOFQxNjE3MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hYjc3NWFhMGQzZmM3MWQ1MDNkMTk5NDBmYWUxMmY1Y2FkNWFlOWEyMDI4MDMxMDYwZDg2NDYwMTYyNWI4NjQ4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.tOIqDTDHUZzuND_3qhAYsxC4tCv1J5awLh_ZRxixki8)
+
+Appointment List
+
+- ![Appointments](https://private-user-images.githubusercontent.com/149634021/328965403-19904e6c-88b5-4ce3-a8ff-dd73332d4e43.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTUxODU4NzEsIm5iZiI6MTcxNTE4NTU3MSwicGF0aCI6Ii8xNDk2MzQwMjEvMzI4OTY1NDAzLTE5OTA0ZTZjLTg4YjUtNGNlMy1hOGZmLWRkNzMzMzJkNGU0My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUwOFQxNjI2MTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNjhjNTVhMDY5YzA4MDgwMTM1M2ZmNjIzNzMzN2E5ZWY0ODUzNjUzOWJiNzU1YTVjNzc2MWQ3NmM3ZDYyNDZhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.iAuUgQt2H10sC2KgqFKSFqhBdkPNDfdJv4ijgzGzlfI)
+
+Magician Services
+
+- ![Services](https://private-user-images.githubusercontent.com/149634021/328965762-07641649-1b60-4171-b2c2-f7ed0c74bf18.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTUxODU4NzEsIm5iZiI6MTcxNTE4NTU3MSwicGF0aCI6Ii8xNDk2MzQwMjEvMzI4OTY1NzYyLTA3NjQxNjQ5LTFiNjAtNDE3MS1iMmMyLWY3ZWQwYzc0YmYxOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUwOFQxNjI2MTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00ZGFhNGIwOGM2MTQ3OGVkMzU5MzQ4Zjg2OTU3MzA5NjEwNTEyMjk2MDA3NTM2YjZiYzQ5NmYzNTBjY2U5MzI0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.dskipOwKl91ItkVSz-uglmPj2aTEX2sOEXKQ1oewsW0)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,35 +155,15 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Will MacLean - [LinkedIn-profile](https://www.linkedin.com/in/will-maclean/)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+API Repo Link: [https://github.com/willyummaclean/magicianfinder-api](https://github.com/willyummaclean/magicianfinder-api)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
